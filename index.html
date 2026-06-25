@@ -1,1 +1,623 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inglés A1 - Lumen Idiomas | Pre-venta · Inicio 8 de agosto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta property="og:title" content="Inglés Nivel A1 - Lumen Idiomas">
+    <meta property="og:description" content="Aprende inglés desde cero hasta el nivel A1 (MCER). Pre-venta especial $247.000 (Antes $320.000). Inicio 8 de agosto. ¡Reserva tu cupo!">
+    <meta property="og:url" content="https://idiomaslumen.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --navy: #003366;
+            --blue: #1d4ed8;
+            --blue-deep: #1B3FA0;
+            --yellow: #FCC419;
+            --cream: #fdf6ed;
+            --orange: #f97316;
+            --orange-dark: #d97706;
+        }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--cream); 
+            padding-top: 80px;
+        }
+        .card { 
+            background: white; 
+            border-radius: 1.5rem; 
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); 
+        }
+        .btn-pay { 
+            transition: transform 0.2s;
+            display: inline-block;
+        }
+        .btn-pay:hover { 
+            transform: scale(1.05); 
+        }
+        .combo-badge {
+            background: linear-gradient(135deg, var(--blue) 0%, var(--navy) 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .calendar-period {
+            background: #eef2ff;
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 5px;
+            display: inline-block;
+        }
+        .price-old {
+            text-decoration: line-through;
+            font-size: 1.3rem;
+            color: #9ca3af;
+            margin-right: 10px;
+        }
+        .price-new {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--orange-dark);
+        }
+        .offer-flag {
+            background: #ef4444;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        .level-pill {
+            background: var(--yellow);
+            color: var(--navy);
+            font-weight: 800;
+            padding: 6px 16px;
+            border-radius: 30px;
+            display: inline-block;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
 
+        /* Header Fijo */
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 12px 24px;
+        }
+
+        /* Botón WhatsApp Flotante */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50px;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.05);
+        }
+        .whatsapp-float i {
+            font-size: 1.5rem;
+        }
+
+        /* Navegación */
+        .nav-menu a {
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover {
+            color: var(--orange);
+        }
+
+        /* FAQ Categorías */
+        .faq-category {
+            border-bottom: 2px solid #e5e7eb;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+        .faq-category h3 {
+            color: var(--navy);
+            font-size: 1.3rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 120px;
+            }
+            .fixed-header {
+                padding: 10px 16px;
+            }
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+                margin-top: 10px;
+            }
+            .whatsapp-float {
+                padding: 10px 16px;
+                bottom: 20px;
+                right: 20px;
+            }
+            .whatsapp-float span {
+                display: none;
+            }
+            .whatsapp-float i {
+                font-size: 1.8rem;
+                margin: 0;
+            }
+            .price-new {
+                font-size: 2rem;
+            }
+        }
+    </style>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1556747089282020');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1556747089282020&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+</head>
+<body class="text-gray-800">
+
+    <!-- ==================== HEADER FIJO CON LOGO Y MENÚ ==================== -->
+    <div class="fixed-header">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <img src="https://raw.githubusercontent.com/idiomaslumen/ingles/main/Untitled%20%281350%20x%201080%20px%29.svg" 
+                     alt="Lumen Idiomas - Educación con corazón" 
+                     class="h-12 w-auto rounded-lg">
+                <span class="text-2xl font-bold" style="color: var(--blue);">IDIOMAS</span>
+            </div>
+
+            <!-- Menú de Navegación -->
+            <div class="nav-menu flex gap-6 mt-3 md:mt-0">
+                <a href="#inicio" class="text-gray-700">Inicio</a>
+                <a href="#cursos" class="text-gray-700">Curso</a>
+                <a href="#testimonios" class="text-gray-700">Testimonios</a>
+                <a href="#faq" class="text-gray-700">FAQ</a>
+                <a href="https://wa.link/39i4b2" target="_blank" class="text-green-600 hover:text-green-700">
+                    <i class="fab fa-whatsapp"></i> Contacto
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== BOTÓN WHATSAPP FLOTANTE ==================== -->
+    <a href="https://wa.link/39i4b2" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+        <span>¡Escríbenos!</span>
+    </a>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+
+        <!-- ==================== SECCIÓN INICIO ==================== -->
+        <a name="inicio"></a>
+        <section class="text-center mb-12">
+            <div class="inline-block bg-yellow-100 text-yellow-800 px-4 py-1 rounded-full text-sm font-semibold mb-3 animate-pulse">
+                🔥 PRE-VENTA ABIERTA · CUPOS LIMITADOS
+            </div>
+            <div class="mb-3">
+                <span class="level-pill">NIVEL A1 · DESDE CERO</span>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-extrabold italic mb-2" style="color: var(--blue);">INGLÉS A1</h1>
+            <h2 class="text-xl md:text-2xl font-semibold italic mb-6" style="color: var(--blue-deep);">Inicia el <span class="bg-yellow-200 px-2 rounded">8 de agosto</span></h2>
+            <p class="text-lg md:text-xl font-bold leading-relaxed max-w-2xl mx-auto">
+                Aprende inglés desde cero hasta tu nivel A1 con clases en vivo, dinámicas y 100% enfocadas en que <span style="color: var(--orange-dark);">hables desde el primer día</span>. No necesitas conocimientos previos.
+            </p>
+        </section>
+
+        <!-- ==================== SECCIÓN CURSO con PRECIO PRE-VENTA ==================== -->
+        <a name="cursos"></a>
+        <section class="mb-16">
+            <div class="text-center mb-10">
+                <span class="combo-badge">🚀 PRECIO DE PRE-VENTA 🚀</span>
+                <h2 class="text-3xl font-bold" style="color: var(--navy);">NIVEL A1 COMPLETO — INICIO 8 DE AGOSTO</h2>
+                <p class="text-gray-600 mt-2">Formación basada en el Marco Común Europeo (MCER · CEFR)</p>
+            </div>
+
+            <div class="grid md:grid-cols-1 gap-6 max-w-3xl mx-auto">
+                <!-- Curso A1 con precio pre-venta 247.000 (normal 320.000) -->
+                <div class="card border-2 p-6 relative overflow-hidden" style="border-color: var(--orange);">
+                    <!-- Ribbon de oferta -->
+                    <div class="absolute top-0 right-0 text-white px-6 py-1 rotate-45 translate-x-8 translate-y-4 text-sm font-bold shadow-md" style="background: var(--orange);">
+                        -23%
+                    </div>
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-bold mb-2" style="color: var(--blue);">INGLÉS NIVEL A1 (de 0 a A1)</h3>
+                        <div class="flex items-center justify-center gap-3 flex-wrap">
+                            <span class="price-old">$320.000</span>
+                            <span class="price-new">$247.000</span>
+                            <span class="offer-flag">AHORRA $73.000</span>
+                        </div>
+                        <div class="calendar-period mt-2" style="background: #fef3c7;">
+                            <i class="fas fa-calendar-alt mr-1"></i> <strong>📅 Inicio: 8 de agosto</strong> — Clases hasta el 1 de octubre
+                        </div>
+                        <p class="text-xs text-green-700 font-semibold mt-1">✨ Precio especial de pre-venta • Cupos limitados</p>
+                    </div>
+
+                    <ul class="space-y-3 mb-8 text-sm">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500">✓</span>
+                            <span><strong>Nivel A1 completo</strong> según el Marco Común Europeo (MCER / CEFR)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500">✓</span>
+                            <span><strong>Clases en vivo de lunes a jueves, 4:00 PM a 6:00 PM</strong> (Inicio 8 de agosto)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500">✓</span>
+                            <span><strong>Enfoque conversacional:</strong> practica speaking, listening, reading y writing</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500">✓</span>
+                            <span><strong>Casi 2 meses de formación</strong> + material y ejercicios prácticos</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500">✓</span>
+                            <span><strong>Acceso a grabaciones</strong> de todas las clases</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500">✓</span>
+                            <span><strong>Grupo VIP de práctica</strong> + seguimiento personalizado</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500">✓</span>
+                            <span><strong>Certificado de finalización del nivel A1</strong></span>
+                        </li>
+                    </ul>
+
+                    <div class="flex justify-center">
+                        <!-- Link de pago (PayU) -->
+                        <a href="https://biz.payulatam.com/B0fa4bd1A04B313" class="btn-pay">
+                            <img src="https://ecommerce.payulatam.com/img-secure-2015/boton_pagar_mediano.png"
+                                 alt="Pagar Inglés A1 - Pre-venta 247.000">
+                        </a>
+                    </div>
+                    <p class="text-center text-xs text-gray-500 mt-3">*Precio de pre-venta $247.000 (Precio regular $320.000) • Inicio 8 de agosto</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== BENEFICIOS PRINCIPALES ==================== -->
+        <div class="grid md:grid-cols-2 gap-8 items-center mb-16">
+            <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                    <span class="text-green-500 text-xl">✅</span>
+                    <p><strong>Clases en vivo desde el 8 de agosto:</strong> lunes a jueves, 4pm a 6pm (hora Colombia).</p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <span class="text-green-500 text-xl">✅</span>
+                    <p>Diseñado para que <strong>aprendas inglés desde cero, sin enredos y a tu ritmo.</strong></p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <span class="text-green-500 text-xl">✅</span>
+                    <p>Con <strong>docentes cercanos y apasionados</strong> por la enseñanza del inglés.</p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <span class="text-green-500 text-xl">✅</span>
+                    <p><strong>Práctica real</strong> en cada clase: hablas, escuchas y participas desde el día uno.</p>
+                </div>
+            </div>
+            <!-- Bloque decorativo (reemplaza la URL por una foto real de clase cuando quieras) -->
+            <div class="card p-8 text-center" style="background: linear-gradient(135deg, #eef2ff 0%, #fef3c7 100%);">
+                <div class="text-6xl mb-3">💡🗣️</div>
+                <p class="text-2xl font-extrabold" style="color: var(--navy);">Educación con corazón</p>
+                <p class="text-gray-600 mt-2">Inglés en vivo, cercano y para todos.</p>
+                <!-- Para usar una foto real:
+                <img src="URL_DE_TU_FOTO" alt="Clase en vivo Lumen Idiomas" class="rounded-lg w-full mt-4"> -->
+            </div>
+        </div>
+
+        <!-- ==================== SECCIÓN DOCENTES ==================== -->
+        <section class="card p-8 mb-16" style="border-top: 4px solid var(--yellow);">
+            <h3 class="text-2xl font-bold mb-4 text-center md:text-left" style="color: var(--navy);">Aprende con quienes enseñan con el corazón</h3>
+            <p class="text-gray-700 leading-relaxed">
+                En Lumen Idiomas creemos que aprender inglés debe ser cercano, claro y motivador. Nuestras clases las guían <strong>docentes apasionados por la enseñanza del inglés</strong>, con una metodología práctica y centrada en que aprendas comunicándote, no memorizando reglas. Aquí no hay preguntas "tontas": acompañamos tu proceso paso a paso hasta que lo entiendas de verdad.
+            </p>
+        </section>
+
+        <!-- ==================== SECCIÓN BENEFICIOS ==================== -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-10" style="color: var(--navy);">¿Qué obtendrás con este curso?</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card p-6 flex items-center gap-4">
+                    <span class="text-3xl">💻</span>
+                    <p><strong>Clases en vivo por Zoom</strong>, dinámicas y participativas</p>
+                </div>
+                <div class="card p-6 flex items-center gap-4">
+                    <span class="text-3xl">🎥</span>
+                    <p>Acceso a <strong>grabaciones</strong> por si faltas a clase</p>
+                </div>
+                <div class="card p-6 flex items-center gap-4">
+                    <span class="text-3xl">📝</span>
+                    <p><strong>Material y ejercicios</strong> alineados al nivel A1 (MCER)</p>
+                </div>
+                <div class="card p-6 flex items-center gap-4">
+                    <span class="text-3xl">🤝</span>
+                    <p><strong>Acompañamiento</strong> y resolución de dudas en grupo VIP</p>
+                </div>
+                <div class="card p-6 flex items-center gap-4">
+                    <span class="text-3xl">🗣️</span>
+                    <p><strong>Práctica de conversación</strong> para perder el miedo a hablar</p>
+                </div>
+                <div class="card p-6 flex items-center gap-4">
+                    <span class="text-3xl">🏅</span>
+                    <p><strong>Certificado</strong> al finalizar el nivel A1</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TESTIMONIOS ==================== -->
+        <a name="testimonios"></a>
+        <section class="py-12 mb-16">
+            <h2 class="text-3xl font-extrabold text-center mb-10" style="color: var(--navy);">Lo que dicen quienes ya aprenden con Lumen</h2>
+            <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+                <img src="https://raw.githubusercontent.com/idiomaslumen/ingles/main/TESTIMONIO%20PAG%201.jpeg" class="rounded-2xl shadow-md w-full border border-gray-100" alt="Testimonio estudiante Lumen Idiomas">
+                <img src="https://raw.githubusercontent.com/idiomaslumen/ingles/main/TESTIMONIO%20PAG%204.jpeg.png" class="rounded-2xl shadow-md w-full border border-gray-100" alt="Testimonio estudiante Lumen Idiomas">
+                <img src="https://raw.githubusercontent.com/idiomaslumen/ingles/main/TESTIMONIO%20PAG%205.jpeg.png" class="rounded-2xl shadow-md w-full border border-gray-100" alt="Testimonio estudiante Lumen Idiomas">
+            </div>
+        </section>
+
+        <!-- ==================== REDES SOCIALES ==================== -->
+        <section class="p-8 rounded-3xl shadow-sm mb-20" style="background: linear-gradient(to right, #fef3c7, #eef2ff);">
+            <h2 class="text-3xl font-bold text-center mb-6" style="color: var(--navy);">📱 SÍGUENOS EN REDES SOCIALES</h2>
+            <p class="text-center text-gray-600 mb-8">Contenido gratuito todos los días para que practiques tu inglés</p>
+            <div class="flex justify-center gap-6 flex-wrap">
+                <a href="https://www.instagram.com/idiomaslumen/" target="_blank" class="flex items-center gap-3 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-3 rounded-full hover:scale-105 transition-transform">
+                    <i class="fab fa-instagram text-2xl"></i>
+                    <span class="font-bold">@idiomaslumen</span>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61590427244479" target="_blank" class="flex items-center gap-3 bg-blue-600 text-white px-6 py-3 rounded-full hover:scale-105 transition-transform">
+                    <i class="fab fa-facebook-f text-2xl"></i>
+                    <span class="font-bold">Idiomas Lumen</span>
+                </a>
+                <a href="https://www.tiktok.com/@idiomas.lumen" target="_blank" class="flex items-center gap-3 bg-black text-white px-6 py-3 rounded-full hover:scale-105 transition-transform">
+                    <i class="fab fa-tiktok text-2xl"></i>
+                    <span class="font-bold">@idiomas.lumen</span>
+                </a>
+            </div>
+            <p class="text-center text-gray-500 text-sm mt-6">Tips diarios, vocabulario, frases útiles y mucho contenido GRATUITO</p>
+        </section>
+
+        <!-- ==================== PREGUNTAS FRECUENTES (FAQ) ==================== -->
+        <a name="faq"></a>
+        <section class="text-center space-y-12 bg-white p-10 rounded-3xl shadow-sm mb-20">
+            <div>
+                <h4 class="font-bold text-xl uppercase mb-2" style="color: var(--orange);">Sin Riesgo:</h4>
+                <p class="text-3xl font-bold italic">Garantía de satisfacción.</p>
+            </div>
+
+            <hr class="border-gray-100">
+
+            <div class="text-left">
+                <h2 class="text-2xl font-bold mb-6 text-center" style="color: var(--navy);">
+                    <i class="fas fa-question-circle"></i> Preguntas Frecuentes
+                </h2>
+
+                <!-- Categoría: Inscripción -->
+                <div class="faq-category">
+                    <h3><i class="fas fa-pen-alt mr-2" style="color: var(--orange);"></i> INSCRIPCIÓN Y PRECIO</h3>
+                </div>
+                <details class="group border-b border-gray-100 py-4 cursor-pointer">
+                    <summary class="font-bold text-lg flex justify-between items-center">
+                        ¿Cuál es el precio de pre-venta y hasta cuándo?
+                        <span class="group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        El precio regular del nivel A1 es <strong>$320.000</strong>, pero por pre-venta lo obtienes en <strong style="color: var(--orange-dark);">$247.000</strong> (ahorro de $73.000). Es un precio especial por tiempo limitado y aplica para quienes reserven su cupo antes del inicio (8 de agosto).
+                    </p>
+                </details>
+
+                <details class="group border-b border-gray-100 py-4 cursor-pointer">
+                    <summary class="font-bold text-lg flex justify-between items-center">
+                        ¿Cómo me inscribo con el precio de pre-venta?
+                        <span class="group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Solo debes dar clic en el botón "Pagar". Serás redirigido a PayU, donde puedes pagar con tarjeta de crédito, débito, PSE, Efecty o tu medio favorito. Una vez realizado el pago, escríbenos a nuestro WhatsApp <strong>304 127 1545</strong> para confirmar tu inscripción y recibir acceso.
+                    </p>
+                </details>
+
+                <details class="group border-b border-gray-100 py-4 cursor-pointer">
+                    <summary class="font-bold text-lg flex justify-between items-center">
+                        ¿Hay descuentos para grupos o referidos?
+                        <span class="group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        ¡Sí! Contáctanos por WhatsApp al <strong>304 127 1545</strong> y cuéntanos cuántos son. Ofrecemos descuentos especiales para grupos de 3 o más estudiantes.
+                    </p>
+                </details>
+
+                <!-- Categoría: Clases -->
+                <div class="faq-category mt-6">
+                    <h3><i class="fas fa-chalkboard-teacher mr-2" style="color: var(--orange);"></i> CLASES - INICIO 8 DE AGOSTO</h3>
+                </div>
+                <details class="group border-b border-gray-100 py-4 cursor-pointer">
+                    <summary class="font-bold text-lg flex justify-between items-center">
+                        ¿Qué horario y días tienen las clases?
+                        <span class="group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        El curso de <strong>Inglés A1 inicia el 8 de agosto</strong> y va hasta el 1 de octubre. Las clases en vivo son de <strong>lunes a jueves, de 4:00 PM a 6:00 PM</strong> (hora Colombia).
+                    </p>
+                </details>
+
+                <details class="group border-b border-gray-100 py-4 cursor-pointer">
+                    <summary class="font-bold text-lg flex justify-between items-center">
+                        ¿Necesito saber algo de inglés para empezar?
+                        <span class="group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        <strong>¡No!</strong> Este es el nivel A1, pensado para empezar <strong>desde cero</strong>. Si nunca has estudiado inglés o quieres reforzar tus bases, este es tu punto de partida ideal.
+                    </p>
+                </details>
+
+                <details class="group border-b border-gray-100 py-4 cursor-pointer">
+                    <summary class="font-bold text-lg flex justify-between items-center">
+                        ¿Cómo se toman las clases?
+                        <span class="group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Las clases son 100% <strong>online en vivo por Zoom</strong>. Son dinámicas, participativas y enfocadas en la práctica. Además, quedan grabadas para que las repases cuando quieras.
+                    </p>
+                </details>
+
+                <details class="group border-b border-gray-100 py-4 cursor-pointer">
+                    <summary class="font-bold text-lg flex justify-between items-center">
+                        ¿Qué pasa si no puedo asistir a una clase en vivo?
+                        <span class="group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Todas las clases quedan <strong>grabadas</strong> y disponibles durante el curso. Puedes verlas cuando quieras y cuantas veces necesites.
+                    </p>
+                </details>
+
+                <!-- Categoría: Pagos -->
+                <div class="faq-category mt-6">
+                    <h3><i class="fas fa-credit-card mr-2" style="color: var(--orange);"></i> PAGOS</h3>
+                </div>
+                <details class="group border-b border-gray-100 py-4 cursor-pointer">
+                    <summary class="font-bold text-lg flex justify-between items-center">
+                        ¿Qué medios de pago aceptan?
+                        <span class="group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Aceptamos todos los medios de pago a través de <strong>PayU</strong>: tarjetas de crédito (Visa, Mastercard, American Express), tarjetas débito, PSE (transferencia bancaria), Efecty, Baloto y más.
+                    </p>
+                </details>
+
+                <details class="group border-b border-gray-100 py-4 cursor-pointer">
+                    <summary class="font-bold text-lg flex justify-between items-center">
+                        ¿Puedo pagar en cuotas con el precio de $247.000?
+                        <span class="group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Sí, al pagar con tarjeta de crédito a través de PayU puedes seleccionar el número de cuotas que prefieras (sujeto a las políticas de tu banco). El valor de pre-venta se mantiene.
+                    </p>
+                </details>
+
+                <!-- Categoría: Plataforma -->
+                <div class="faq-category mt-6">
+                    <h3><i class="fas fa-laptop mr-2" style="color: var(--orange);"></i> PLATAFORMA Y ACCESO</h3>
+                </div>
+                <details class="group border-b border-gray-100 py-4 cursor-pointer">
+                    <summary class="font-bold text-lg flex justify-between items-center">
+                        ¿Cómo accedo a las clases después de pagar?
+                        <span class="group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Después de realizar tu pago y confirmar por WhatsApp, recibirás el enlace de acceso a las clases por Zoom, el material y el grupo VIP. Allí encontrarás todo lo necesario para tu nivel A1.
+                    </p>
+                </details>
+
+                <details class="group border-b border-gray-100 py-4 cursor-pointer">
+                    <summary class="font-bold text-lg flex justify-between items-center">
+                        ¿Hasta cuándo tengo acceso al material?
+                        <span class="group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Tendrás acceso a todo el material durante la duración del curso (del 8 de agosto al 1 de octubre). Las grabaciones quedan disponibles para que repases cuando quieras.
+                    </p>
+                </details>
+
+                <!-- Categoría: Nivel -->
+                <div class="faq-category mt-6">
+                    <h3><i class="fas fa-graduation-cap mr-2" style="color: var(--orange);"></i> NIVEL Y RESULTADOS</h3>
+                </div>
+                <details class="group border-b border-gray-100 py-4 cursor-pointer">
+                    <summary class="font-bold text-lg flex justify-between items-center">
+                        ¿Qué es el nivel A1 del MCER?
+                        <span class="group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        El A1 es el primer nivel del <strong>Marco Común Europeo de Referencia (MCER / CEFR)</strong>. Al terminarlo podrás presentarte, dar información básica sobre ti, comprender frases sencillas y comunicarte en situaciones cotidianas. Es la base perfecta para seguir avanzando hacia el A2.
+                    </p>
+                </details>
+
+                <details class="group border-b border-gray-100 py-4 cursor-pointer">
+                    <summary class="font-bold text-lg flex justify-between items-center">
+                        ¿Recibo certificado al terminar?
+                        <span class="group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Sí. Al completar el curso recibirás un <strong>certificado de finalización del nivel A1</strong> de Lumen Idiomas.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="text-center py-10 text-gray-400 text-sm bg-gray-900">
+        <p>© 2026 Lumen Idiomas · Educación con corazón. Todos los derechos reservados. | Inglés A1 - Inicio: 8 de agosto · Pre-venta $247.000</p>
+        <p class="mt-2">
+            <a href="https://idiomaslumen.com" target="_blank" class="text-gray-400 hover:text-yellow-300">idiomaslumen.com</a>
+            <span class="mx-2">·</span>
+            <a href="mailto:idiomaslumen@gmail.com" class="text-gray-400 hover:text-yellow-300">idiomaslumen@gmail.com</a>
+        </p>
+        <div class="flex justify-center gap-6 mt-4">
+            <a href="https://www.instagram.com/idiomaslumen/" target="_blank" class="text-gray-400 hover:text-pink-400">
+                <i class="fab fa-instagram text-xl"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61590427244479" target="_blank" class="text-gray-400 hover:text-blue-400">
+                <i class="fab fa-facebook-f text-xl"></i>
+            </a>
+            <a href="https://www.tiktok.com/@idiomas.lumen" target="_blank" class="text-gray-400 hover:text-white">
+                <i class="fab fa-tiktok text-xl"></i>
+            </a>
+            <a href="https://wa.link/39i4b2" target="_blank" class="text-gray-400 hover:text-green-400">
+                <i class="fab fa-whatsapp text-xl"></i>
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>
