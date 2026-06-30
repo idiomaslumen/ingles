@@ -93,8 +93,6 @@
             font-size: 0.95rem;
             letter-spacing: 0.5px;
         }
-
-        /* Header Fijo */
         .fixed-header {
             position: fixed;
             top: 0;
@@ -105,8 +103,6 @@
             z-index: 1000;
             padding: 12px 24px;
         }
-
-        /* Botón WhatsApp Flotante */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -130,8 +126,6 @@
         .whatsapp-float i {
             font-size: 1.5rem;
         }
-
-        /* Navegación */
         .nav-menu a {
             text-decoration: none;
             font-weight: 600;
@@ -140,8 +134,6 @@
         .nav-menu a:hover {
             color: var(--orange);
         }
-
-        /* FAQ Categorías */
         .faq-category {
             border-bottom: 2px solid #e5e7eb;
             margin-bottom: 20px;
@@ -151,8 +143,26 @@
             color: var(--navy);
             font-size: 1.3rem;
         }
-
-        /* Responsive */
+        .btn-bold-pay {
+            background: var(--blue);
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+        }
+        .btn-bold-pay:hover {
+            transform: scale(1.05);
+            background: var(--navy);
+        }
+        .btn-bold-pay:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
         @media (max-width: 768px) {
             body {
                 padding-top: 120px;
@@ -202,21 +212,21 @@
     /></noscript>
     <!-- End Meta Pixel Code -->
 
+    <!-- Bold Checkout Library -->
+    <script src="https://checkout.bold.co/library/boldPaymentButton.js"></script>
+
 </head>
 <body class="text-gray-800">
 
     <!-- ==================== HEADER FIJO CON LOGO Y MENÚ ==================== -->
     <div class="fixed-header">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
-            <!-- Logo -->
             <div class="flex items-center gap-3">
                 <img src="https://raw.githubusercontent.com/idiomaslumen/ingles/main/Untitled%20%281350%20x%201080%20px%29.svg" 
                      alt="Lumen Idiomas - Educación con corazón" 
                      class="h-12 w-auto rounded-lg">
                 <span class="text-2xl font-bold" style="color: var(--blue);">IDIOMAS</span>
             </div>
-
-            <!-- Menú de Navegación -->
             <div class="nav-menu flex gap-6 mt-3 md:mt-0">
                 <a href="#inicio" class="text-gray-700">Inicio</a>
                 <a href="#cursos" class="text-gray-700">Curso</a>
@@ -229,7 +239,6 @@
         </div>
     </div>
 
-    <!-- ==================== BOTÓN WHATSAPP FLOTANTE ==================== -->
     <a href="https://wa.link/39i4b2" target="_blank" class="whatsapp-float">
         <i class="fab fa-whatsapp"></i>
         <span>¡Escríbenos!</span>
@@ -237,7 +246,6 @@
 
     <main class="max-w-4xl mx-auto px-4 py-8">
 
-        <!-- ==================== SECCIÓN INICIO ==================== -->
         <a name="inicio"></a>
         <section class="text-center mb-12">
             <div class="inline-block bg-yellow-100 text-yellow-800 px-4 py-1 rounded-full text-sm font-semibold mb-3 animate-pulse">
@@ -253,7 +261,6 @@
             </p>
         </section>
 
-        <!-- ==================== SECCIÓN CURSO con PRECIO PRE-VENTA ==================== -->
         <a name="cursos"></a>
         <section class="mb-16">
             <div class="text-center mb-10">
@@ -263,9 +270,7 @@
             </div>
 
             <div class="grid md:grid-cols-1 gap-6 max-w-3xl mx-auto">
-                <!-- Curso A1 con precio pre-venta 247.000 (normal 320.000) -->
                 <div class="card border-2 p-6 relative overflow-hidden" style="border-color: var(--orange);">
-                    <!-- Ribbon de oferta -->
                     <div class="absolute top-0 right-0 text-white px-6 py-1 rotate-45 translate-x-8 translate-y-4 text-sm font-bold shadow-md" style="background: var(--orange);">
                         -23%
                     </div>
@@ -313,19 +318,20 @@
                         </li>
                     </ul>
 
-                    <div class="flex justify-center">
-                        <!-- Link de pago (PayU) -->
-                        <a href="https://biz.payulatam.com/B0fa4bd1A04B313" class="btn-pay">
-                            <img src="https://ecommerce.payulatam.com/img-secure-2015/boton_pagar_mediano.png"
-                                 alt="Pagar Inglés A1 - Pre-venta 247.000">
-                        </a>
+                    <!-- ============ BOTÓN DE PAGO BOLD ============ -->
+                    <div class="flex flex-col items-center">
+                        <button id="btn-pagar-a1" class="btn-bold-pay">
+                            Inscribirme ahora — $247.000 COP
+                        </button>
+                        <p id="estado-pago-a1" class="text-sm text-gray-500 mt-2"></p>
                     </div>
+                    <!-- ============ FIN BOTÓN BOLD ============ -->
+
                     <p class="text-center text-xs text-gray-500 mt-3">*Precio de pre-venta $247.000 (Precio regular $320.000) • Inicio 8 de agosto</p>
                 </div>
             </div>
         </section>
 
-        <!-- ==================== BENEFICIOS PRINCIPALES ==================== -->
         <div class="grid md:grid-cols-2 gap-8 items-center mb-16">
             <div class="space-y-4">
                 <div class="flex items-start gap-3">
@@ -345,17 +351,13 @@
                     <p><strong>Práctica real</strong> en cada clase: hablas, escuchas y participas desde el día uno.</p>
                 </div>
             </div>
-            <!-- Bloque decorativo (reemplaza la URL por una foto real de clase cuando quieras) -->
             <div class="card p-8 text-center" style="background: linear-gradient(135deg, #eef2ff 0%, #fef3c7 100%);">
                 <div class="text-6xl mb-3">💡🗣️</div>
                 <p class="text-2xl font-extrabold" style="color: var(--navy);">Educación con corazón</p>
                 <p class="text-gray-600 mt-2">Inglés en vivo, cercano y para todos.</p>
-                <!-- Para usar una foto real:
-                <img src="URL_DE_TU_FOTO" alt="Clase en vivo Lumen Idiomas" class="rounded-lg w-full mt-4"> -->
             </div>
         </div>
 
-        <!-- ==================== SECCIÓN DOCENTES ==================== -->
         <section class="card p-8 mb-16" style="border-top: 4px solid var(--yellow);">
             <h3 class="text-2xl font-bold mb-4 text-center md:text-left" style="color: var(--navy);">Aprende con quienes enseñan con el corazón</h3>
             <p class="text-gray-700 leading-relaxed">
@@ -363,7 +365,6 @@
             </p>
         </section>
 
-        <!-- ==================== SECCIÓN BENEFICIOS ==================== -->
         <section class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-10" style="color: var(--navy);">¿Qué obtendrás con este curso?</h2>
             <div class="grid md:grid-cols-2 gap-6">
@@ -394,7 +395,6 @@
             </div>
         </section>
 
-        <!-- ==================== TESTIMONIOS ==================== -->
         <a name="testimonios"></a>
         <section class="py-12 mb-16">
             <h2 class="text-3xl font-extrabold text-center mb-10" style="color: var(--navy);">Lo que dicen quienes ya aprenden con Lumen</h2>
@@ -405,7 +405,6 @@
             </div>
         </section>
 
-        <!-- ==================== REDES SOCIALES ==================== -->
         <section class="p-8 rounded-3xl shadow-sm mb-20" style="background: linear-gradient(to right, #fef3c7, #eef2ff);">
             <h2 class="text-3xl font-bold text-center mb-6" style="color: var(--navy);">📱 SÍGUENOS EN REDES SOCIALES</h2>
             <p class="text-center text-gray-600 mb-8">Contenido gratuito todos los días para que practiques tu inglés</p>
@@ -426,7 +425,6 @@
             <p class="text-center text-gray-500 text-sm mt-6">Tips diarios, vocabulario, frases útiles y mucho contenido GRATUITO</p>
         </section>
 
-        <!-- ==================== PREGUNTAS FRECUENTES (FAQ) ==================== -->
         <a name="faq"></a>
         <section class="text-center space-y-12 bg-white p-10 rounded-3xl shadow-sm mb-20">
             <div>
@@ -441,7 +439,6 @@
                     <i class="fas fa-question-circle"></i> Preguntas Frecuentes
                 </h2>
 
-                <!-- Categoría: Inscripción -->
                 <div class="faq-category">
                     <h3><i class="fas fa-pen-alt mr-2" style="color: var(--orange);"></i> INSCRIPCIÓN Y PRECIO</h3>
                 </div>
@@ -461,7 +458,7 @@
                         <span class="group-open:rotate-180 transition-transform">▼</span>
                     </summary>
                     <p class="mt-4 text-gray-600 leading-relaxed">
-                        Solo debes dar clic en el botón "Pagar". Serás redirigido a PayU, donde puedes pagar con tarjeta de crédito, débito, PSE, Efecty o tu medio favorito. Una vez realizado el pago, escríbenos a nuestro WhatsApp <strong>304 127 1545</strong> para confirmar tu inscripción y recibir acceso.
+                        Solo debes dar clic en el botón "Inscribirme ahora". Se abrirá la pasarela de pagos de Bold, donde puedes pagar con tarjeta de crédito, débito, PSE o tu medio favorito. Una vez confirmado el pago, recibirás un correo y puedes escribirnos a nuestro WhatsApp <strong>304 127 1545</strong> para confirmar tu inscripción y recibir acceso.
                     </p>
                 </details>
 
@@ -475,7 +472,6 @@
                     </p>
                 </details>
 
-                <!-- Categoría: Clases -->
                 <div class="faq-category mt-6">
                     <h3><i class="fas fa-chalkboard-teacher mr-2" style="color: var(--orange);"></i> CLASES - INICIO 8 DE AGOSTO</h3>
                 </div>
@@ -519,7 +515,6 @@
                     </p>
                 </details>
 
-                <!-- Categoría: Pagos -->
                 <div class="faq-category mt-6">
                     <h3><i class="fas fa-credit-card mr-2" style="color: var(--orange);"></i> PAGOS</h3>
                 </div>
@@ -529,7 +524,7 @@
                         <span class="group-open:rotate-180 transition-transform">▼</span>
                     </summary>
                     <p class="mt-4 text-gray-600 leading-relaxed">
-                        Aceptamos todos los medios de pago a través de <strong>PayU</strong>: tarjetas de crédito (Visa, Mastercard, American Express), tarjetas débito, PSE (transferencia bancaria), Efecty, Baloto y más.
+                        Aceptamos todos los medios de pago a través de <strong>Bold</strong>: tarjetas de crédito (Visa, Mastercard, American Express), tarjetas débito, PSE (transferencia bancaria) y billeteras digitales.
                     </p>
                 </details>
 
@@ -539,11 +534,10 @@
                         <span class="group-open:rotate-180 transition-transform">▼</span>
                     </summary>
                     <p class="mt-4 text-gray-600 leading-relaxed">
-                        Sí, al pagar con tarjeta de crédito a través de PayU puedes seleccionar el número de cuotas que prefieras (sujeto a las políticas de tu banco). El valor de pre-venta se mantiene.
+                        Sí, al pagar con tarjeta de crédito a través de Bold puedes seleccionar el número de cuotas que prefieras (sujeto a las políticas de tu banco). El valor de pre-venta se mantiene.
                     </p>
                 </details>
 
-                <!-- Categoría: Plataforma -->
                 <div class="faq-category mt-6">
                     <h3><i class="fas fa-laptop mr-2" style="color: var(--orange);"></i> PLATAFORMA Y ACCESO</h3>
                 </div>
@@ -567,7 +561,6 @@
                     </p>
                 </details>
 
-                <!-- Categoría: Nivel -->
                 <div class="faq-category mt-6">
                     <h3><i class="fas fa-graduation-cap mr-2" style="color: var(--orange);"></i> NIVEL Y RESULTADOS</h3>
                 </div>
@@ -595,7 +588,6 @@
 
     </main>
 
-    <!-- ==================== FOOTER ==================== -->
     <footer class="text-center py-10 text-gray-400 text-sm bg-gray-900">
         <p>© 2026 Lumen Idiomas · Educación con corazón. Todos los derechos reservados. | Inglés A1 - Inicio: 8 de agosto · Pre-venta $247.000</p>
         <p class="mt-2">
@@ -618,6 +610,50 @@
             </a>
         </div>
     </footer>
+
+    <!-- ==================== SCRIPT BOTÓN DE PAGO BOLD ==================== -->
+    <script>
+        document.getElementById('btn-pagar-a1').addEventListener('click', async () => {
+            const boton = document.getElementById('btn-pagar-a1');
+            const estado = document.getElementById('estado-pago-a1');
+
+            boton.disabled = true;
+            estado.textContent = 'Preparando tu pago, un momento...';
+
+            try {
+                const amount = '247000';
+                const currency = 'COP';
+
+                const resp = await fetch(
+                    `https://ingles-mocha.vercel.app/api/bold-signature?amount=${amount}&currency=${currency}&product=A1`
+                );
+
+                if (!resp.ok) {
+                    throw new Error('No se pudo preparar el pago');
+                }
+
+                const data = await resp.json();
+
+                const checkout = new BoldCheckout({
+                    orderId: data.orderId,
+                    currency: data.currency,
+                    amount: data.amount,
+                    apiKey: '6Av0PDx898ki8bt5LJvwC5Wz0g1vyd8UmQPHgKnmVpc',
+                    integritySignature: data.integritySignature,
+                    description: 'Curso de Inglés A1 (Pre-venta) - Idiomas LUMEN',
+                    redirectionUrl: 'https://idiomaslumen.com/gracias.html'
+                });
+
+                checkout.open();
+                estado.textContent = '';
+            } catch (err) {
+                estado.textContent = 'Hubo un problema al iniciar el pago. Intenta de nuevo o escríbenos por WhatsApp.';
+                console.error(err);
+            } finally {
+                boton.disabled = false;
+            }
+        });
+    </script>
 
 </body>
 </html>
