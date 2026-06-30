@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¡Gracias por tu pago! · Idiomas LUMEN</title>
+<style>
+  :root {
+    --navy: #0B1E4B;
+    --blue: #1E5FA8;
+    --yellow: #F4C430;
+    --cream: #FBF7EE;
+    --orange: #E8743B;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: var(--cream);
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 24px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 16px;
+    max-width: 480px;
+    width: 100%;
+    padding: 48px 36px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(11,30,75,0.1);
+    border-top: 6px solid var(--yellow);
+  }
+  .check {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--blue);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 32px;
+  }
+  h1 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4a4a4a;
+  }
+  .brand {
+    color: var(--orange);
+    font-weight: 600;
+  }
+  a.btn {
+    display: inline-block;
+    margin-top: 28px;
+    background: var(--blue);
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+  a.btn:hover {
+    background: var(--navy);
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="check">✓</div>
+    <h1>¡Gracias por tu pago!</h1>
+    <p>
+      Tu inscripción al <strong>Curso de Inglés para Principiantes A1</strong> de
+      <span class="brand">Idiomas LUMEN</span> fue recibida correctamente.
+    </p>
+    <p>
+      Muy pronto recibirás un correo con los detalles de acceso a tu curso. Si tienes
+      alguna duda, escríbenos y con gusto te ayudamos.
+    </p>
+    <a class="btn" href="index.html">Volver al inicio</a>
+  </div>
+</body>
+</html>
